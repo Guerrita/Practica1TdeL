@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="sample.Controller">
+    <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab text="Lectura de archivo">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Pane layoutY="1.0" prefHeight="360.0" prefWidth="600.0">
+                        <VBox spacing="20.0">
+                            <children>
+                                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="200.0">
+                                    <children>
+                                        <Label text="Seleccione un archivo:">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Button mnemonicParsing="false" onMouseClicked="#searchFile" prefHeight="31.0" prefWidth="153.0" text="Examinar" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" top="10.0" />
+                                    </padding>
+                                </HBox>
+                                <TextArea fx:id="ta_file" prefHeight="211.0" prefWidth="555.0" promptText="Puedes seleccionar un archivo java con &quot;Examinar&quot; y editarlo en el area de texto o escribirlo directamente.">
+                                    <font>
+                                        <Font name="Segoe UI" size="20.0" />
+                                    </font>
+                                </TextArea>
+                                <Button mnemonicParsing="false" onMouseClicked="#analyze" prefHeight="31.0" prefWidth="367.0" text="Analizar" />
+                            </children>
+                            <padding>
+                                <Insets left="15.0" />
+                            </padding>
+                        </VBox>
+                    </Pane>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Ver tokens">
+                <content>
+                    <TextArea prefHeight="200.0" prefWidth="200.0">
+                        <padding>
+                            <Insets bottom="30.0" left="30.0" right="30.0" top="50.0" />
+                        </padding>
+                    </TextArea>
+                </content></Tab>
+        </tabs>
+    </TabPane>
+</AnchorPane>
